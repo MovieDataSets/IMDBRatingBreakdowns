@@ -1,4 +1,3 @@
-IMDBRatingBreakdowns
 
 library(tidyr)
 library(dplyr)
@@ -17,7 +16,7 @@ getDATA <- function(html){
 }
 
 
-suppressMessages(IMDBdata <- read_csv("https://raw.githubusercontent.com/MovieDataSets/IMDBcodes/main/IMDBcode.csv?token=GHSAT0AAAAAABRM6EO4EBPEIG4FLDKZQVNWYUVF4YA")
+suppressMessages(IMDBdata <- read_csv("C:/Users/kilbi/Documents/IMDB/IMDBcode.csv")
 )
 
 
@@ -44,5 +43,3 @@ MASTERDATA <- MASTERDATA %>% bind_rows(df_html)
 }
 
 MASTERDATA  %>% write.csv(paste0("C:/Users/kilbi/Documents/IMDB/Ratings-Breakdown-Data-",Sys.Date(),".csv"),row.names = FALSE)
-
-
